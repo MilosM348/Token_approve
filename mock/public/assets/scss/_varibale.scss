@@ -1,0 +1,16 @@
+%padding {
+  padding: 0 12px;
+}
+
+%grid {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+$sizes: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);

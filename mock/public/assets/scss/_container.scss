@@ -1,0 +1,33 @@
+.container {
+  @extend %padding;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+
+  &-fluid {
+    max-width: 100%;
+    width: 100%;
+    @extend %padding;
+  }
+
+  @include media('min', 576px) {
+    max-width: 540px;
+  }
+
+  @include media('min', 768px) {
+    max-width: 720px;
+  }
+
+  @include media('min', 992px) {
+    max-width: 960px;
+  }
+
+  @include media('min', 1200px) {
+    max-width: 1140px;
+  }
+
+  @include media('min', 1400px) {
+    max-width: 1320px;
+  }
+  
+}

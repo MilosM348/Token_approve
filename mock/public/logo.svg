@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150.127" height="150.128" viewBox="0 0 150.127 150.128">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.943" y1="0.211" x2="0.18" y2="0.859" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7264ff"/>
+      <stop offset="1" stop-color="#4b23bd"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.373" y1="0.599" x2="1.058" y2="0.651" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#7062fd"/>
+    </linearGradient>
+  </defs>
+  <g id="LOGO1" transform="translate(-608.936 -230.963)">
+    <path id="Ali-Lohrasbi-Vabastegi-472x472" d="M0,75.064c0,56.3,18.766,75.064,75.064,75.064s75.064-18.766,75.064-75.064S131.361,0,75.064,0,0,18.766,0,75.064" transform="translate(608.936 230.963)" fill="url(#linear-gradient)"/>
+    <path id="Path_116757" data-name="Path 116757" d="M74.627,47.911,60.843,55.536,41.388,67.209a9.013,9.013,0,0,1-8.49,0l-15.211-9.2a8.622,8.622,0,0,1-4.245-7.428V32.9a8.725,8.725,0,0,1,4.245-7.428L32.9,16.626a9.013,9.013,0,0,1,8.49,0l15.211,9.2a8.622,8.622,0,0,1,4.245,7.428V44.924l13.442-7.782V25.115a8.725,8.725,0,0,0-4.245-7.428L41.741,1.061a9.013,9.013,0,0,0-8.49,0L4.245,18.04A7.781,7.781,0,0,0,0,25.115V58.365a8.725,8.725,0,0,0,4.245,7.428L32.9,82.419a9.013,9.013,0,0,0,8.49,0L60.843,71.1,74.91,62.932Z" transform="translate(701.48 254.354) rotate(61)" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>

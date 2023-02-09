@@ -1,0 +1,220 @@
+.d {
+  &-inline-block {
+    display: block !important;
+  }
+
+  &-block {
+    display: block !important;
+  }
+
+  &-flex {
+    display: flex !important;
+  }
+
+  &-none {
+    display: none !important;
+  }
+
+  $display: (inline-block, block, flex, none);
+
+  @each $size, $value in $sizes {
+    @include media("min", $value) {
+      @each $val in $display {
+        &-#{$size}-#{$val} {
+          display: #{$val} !important;
+        }
+      }
+    }
+  }
+}
+
+.justify-content {
+  &-start {
+    justify-content: start;
+  }
+
+  &-end {
+    justify-content: end;
+  }
+
+  &-center {
+    justify-content: center;
+  }
+
+  &-between {
+    justify-content: space-between;
+  }
+
+  $justify-content: (
+    start: start,
+    end: end,
+    center: center,
+    between: space-between,
+  );
+
+  @each $size, $value in $sizes {
+    @include media("min", $value) {
+      @each $name, $val in $justify-content {
+        &-#{$size}-#{$name} {
+          justify-content: #{$val};
+        }
+      }
+    }
+  }
+}
+
+.align-items {
+  &-start {
+    align-items: flex-start;
+  }
+
+  &-end {
+    align-items: flex-end;
+  }
+
+  &-center {
+    align-items: center;
+  }
+
+  $align-items: (start, end, center);
+
+  @each $size, $value in $sizes {
+    @include media("min", $value) {
+      @each $val in $align-items {
+        &-#{$size}-#{$val} {
+          align-items: #{$val};
+        }
+      }
+    }
+  }
+}
+
+.flex {
+  &-wrap {
+    flex-wrap: wrap;
+  }
+
+  &-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  $flex-wrap: (wrap, nowrap);
+
+  @each $size, $value in $sizes {
+    @include media("min", $value) {
+      @each $val in $flex-wrap {
+        &-#{$size}-#{$val} {
+          flex-wrap: #{$val};
+        }
+      }
+    }
+  }
+
+  &-row {
+    flex-direction: row;
+  }
+
+  &-column {
+    flex-direction: column;
+  }
+
+  $flex-direction: (row, column);
+
+  @each $size, $value in $sizes {
+    @include media("min", $value) {
+      @each $val in $flex-direction {
+        &-#{$size}-#{$val} {
+          flex-direction: #{$val};
+        }
+      }
+    }
+  }
+}
+
+.text {
+  &-left {
+    text-align: left;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  $text: (left, right, center);
+
+  @each $size, $value in $sizes {
+    @include media("min", $value) {
+      @each $val in $text {
+        &-#{$size}-#{$val} {
+          text-align: #{$val};
+        }
+      }
+    }
+  }
+}
+
+.overflow {
+  &-hidden {
+    overflow: hidden;
+  }
+
+  $overflow: (auto, hidden, visible, scroll);
+
+  @each $size, $value in $sizes {
+    @include media("min", $value) {
+      @each $val in $overflow {
+        &-#{$size}-#{$val} {
+          overflow: #{$val};
+        }
+      }
+    }
+  }
+}
+
+.position {
+  &-relative {
+    position: relative;
+  }
+
+  &-absolute {
+    position: absolute;
+  }
+
+  &-fixed {
+    position: fixed;
+  }
+
+  $position: (relative, absolute, fixed);
+
+  @each $size, $value in $sizes {
+    @include media("min", $value) {
+      @each $val in $position {
+        &-#{$size}-#{$val} {
+          position: #{$val};
+        }
+      }
+    }
+  }
+}
+
+.order {
+  @for $i from 1 through 12 {
+    &-#{$i} {
+      order: $i;
+    }
+  }
+
+  @each $size, $value in $sizes {
+    @include media("min", $value) {
+      @for $i from 1 through 12 {
+        &-#{$size}-#{$i} {
+          order: $i;
+        }
+      }
+    }
+  }
+}

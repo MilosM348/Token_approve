@@ -1,0 +1,62 @@
+.row {
+  margin: 0 -12px;
+  @include flex("", "", wrap);
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    @extend %padding;
+    @extend %grid;
+    max-width: ($i / 12) * 100%;
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-sm-#{$i} {
+    @extend %padding;
+    @extend %grid;
+    @include media("min", 576px) {
+      max-width: ($i / 12) * 100%;
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-md-#{$i} {
+    @extend %padding;
+    @extend %grid;
+    @include media("min", 768px) {
+      max-width: ($i / 12) * 100%;
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-lg-#{$i} {
+    @extend %padding;
+    @extend %grid;
+    @include media("min", 992px) {
+      max-width: ($i / 12) * 100%;
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-xl-#{$i} {
+    @extend %padding;
+    @extend %grid;
+    @include media("min", 1200px) {
+      max-width: ($i / 12) * 100%;
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-xxl-#{$i} {
+    @extend %padding;
+    @extend %grid;
+    @include media("min", 1400px) {
+      max-width: ($i / 12) * 100%;
+    }
+  }
+}

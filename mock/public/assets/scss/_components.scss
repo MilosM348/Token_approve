@@ -1,0 +1,153 @@
+.btn {
+  position: relative;
+  max-width: 168px;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  height: 52px;
+  line-height: 52px;
+  border-radius: 9px;
+  text-align: center;
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 400;
+
+  &::after {
+    transition: all 0.3s ease-in-out;
+  }
+
+  &-secondary {
+    background-color: rgba(#151825, 0.46);
+    color: #9c9faa;
+    border: 1px solid #1a1e2d;
+
+    &:hover {
+      background-color: #151825;
+    }
+  }
+
+  &-gradient {
+    &-primary {
+      background-image: linear-gradient(to right, #7264ff, #6735ec);
+      color: #fff;
+      z-index: 2;
+
+      &::after {
+        content: "";
+        position: absolute;
+        @include fix;
+        z-index: -1;
+        background-image: linear-gradient(to left, #7264ff, #6735ec);
+        opacity: 0;
+      }
+
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.modal {
+  z-index: 1024;
+  @include hide;
+
+  &,
+  &-content,
+  &-backdrop {
+    transition: all 0.3s ease-in-out;
+  }
+
+  &,
+  &-backdrop {
+    position: fixed;
+    @include fix;
+  }
+
+  &-backdrop {
+    background-color: rgba(#060817, 0.8);
+    z-index: 1020;
+  }
+
+  &-dialog {
+    @include flex(center, center);
+    height: calc(100vh - 16px);
+    margin: 8px;
+  }
+
+  &-content {
+    position: relative;
+    max-height: 100%;
+    max-width: 389px;
+    width: 100%;
+    border-radius: 29px;
+    background-color: #151825;
+    box-shadow: 0 5px 50px #0f0f15;
+    overflow: hidden auto;
+    transform: translateY(-100px);
+  }
+
+  &-close {
+    background-color: #212534;
+    text-align: center;
+    line-height: 33px;
+    height: 33px;
+    width: 33px;
+    border-radius: 50%;
+    font-size: 11px;
+    color: #9c9faa;
+    position: absolute;
+    top: 25px;
+    right: 29px;
+  }
+
+  &.opened {
+    @include show;
+  }
+
+  &.opened &-content {
+    transform: translateY(0px);
+  }
+}
+
+[data-copy] {
+  position: relative;
+
+  &::after {
+    content: "copied!";
+    bottom: calc(100% + 10px);
+    font-size: 10px;
+    font-weight: 300;
+    color: #fff;
+    background-color: #060817;
+    white-space: nowrap;
+    line-height: 18px;
+    padding: 0 5px;
+    border-radius: 4px;
+    z-index: 3;
+  }
+
+  &::before {
+    content: "";
+    bottom: calc(100% + 1px);
+    border: 5px solid;
+    border-color: #060817 transparent transparent;
+    z-index: 1;
+  }
+
+  &::after,
+  &::before {
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    @include hide;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.copied {
+    &::after,
+    &::before {
+      @include show;
+    }
+  }
+}
