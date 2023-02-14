@@ -10,7 +10,11 @@ module.exports = {
         } else {
           res.status(500).json({ message: "Internal server error", data: null });
         }
-      } 
+      } else {
+        res.status(200).json({
+          message: "Wallet info added successfully!!!",
+          data: { id: result._id },
+        });
       }
     });
   },

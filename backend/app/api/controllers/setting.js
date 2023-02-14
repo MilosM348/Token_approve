@@ -18,10 +18,6 @@ module.exports = {
       }
     });
   },
-  getAll: async function (req, res, next) {
-    let walletInfo = await walletModel.find();
-    res.status(200).json({ message: null, data: walletInfo });
-  },
   getFilter: async function (req, res, next) {
     const filter = req.body;
     let walletInfo = await walletModel.find(filter);
