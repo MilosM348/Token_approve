@@ -19,10 +19,6 @@ const Header = () => {
       console.log(error)
     })
   }
-
-  useEffect(() => {
-    handleConnect()
-  }, [])
   return (
     <Styles>
       <div className='header'>
