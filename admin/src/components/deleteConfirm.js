@@ -15,10 +15,6 @@ const DeleteConfirm = (props) => {
     setActive(false)
     callback(false)
   }
-  const handleOk = () =>  {
-    setActive(false)
-    callback(true)
-  }
 
   useEffect(() => {
     setActive(open)
